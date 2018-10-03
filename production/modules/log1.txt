@@ -1,0 +1,104 @@
+    1* 
+    2  vim /etc/ssh/sshd_config 
+    3  systemctl restart sshd 
+    4  apt install python -y 
+    5  apt install puppetserver -y 
+    6  dpkg -l | grep puppet
+    7  wget https://apt.puppetlabs.com/puppet5-release-xenial.deb
+    8  dpkg -i puppet5-release-xenial.deb 
+    9  apt update && apt install puppetserver && systemctl start puppetserver 
+   10  puppet
+   11  apt install puppet-common 
+   12  puppet resource package facter ensure = present
+   13  puppet resource package facter ensure=present
+   14  facter
+   15  ss -ntpl |grep 8140
+   16  puppet resource package facter ensure=present
+   17  puppet
+   18  puppet resource package facter ensure=present
+   19  ss -ntpl |grep 8140
+   20  systemctl start puppetserver
+   21  journalctl -xe
+   22  apt install puppetserver -y 
+   23  systemctl start puppetserver 
+   24  cd /etc/puppetlabs/
+   25  ls
+   26  cd code
+   27  cd environments/
+   28  cd production/
+   29  puppet config print
+   30  puppetconfig print
+   31  puppet config print
+   32  vim /etc/puppetlabs/puppet/puppet.conf 
+   33  puppet config print
+   34  vim autosign.conf
+   35  puppet config print
+   36  exit
+   37  puppet config print
+   38  cd /etc/puppetlabs/puppet
+   39  ls
+   40  cd ..
+   41  ls
+   42  cd code
+   43  ls
+   44  cd environments/
+   45  ls
+   46  cd production/
+   47  ls
+   48  puppet config print
+   49  vim /etc/puppetlabs/puppet/puppet.conf 
+   50  vim autosign.conf
+   51  puppet config print |grep configdir
+   52  vim /opt/puppetlabs/puppet/lib/ruby/vendor_ruby/puppet/settings.rb 
+   53  puppet config print |grep configdir
+   54  pdk new module web
+   55  apt-get install pdk
+   56  pdk new module web
+   57  ls
+   58  cd manifests/
+   59  ls
+   60  vim site.pp
+   61  cd ..
+   62  cd modules/
+   63  ls
+   64  mkdir manifests
+   65  cd manisfes
+   66  cd manifests/
+   67  vim init.pp
+   68  puppet resource package apache2
+   69  cd manifests/
+   70  vim init.pp
+   71  puppet config print
+   72  puppet config print |grep configdir
+   73  puppet config print |grep confdir
+   74  cd /etc/puppetlabs/puppet
+   75  ls
+   76  man ss
+   77  vim /etc/resolv.conf 
+   78  vi /etc/hostname
+   79  vi /etc/hosts
+   80  puppet agent -t
+   81  hostname
+   82  hostnamectl set-hostname dexter.com.br
+   83  hostname
+   84  hostnamectl set-hostname devops.dexter.com.br
+   85  hostname
+   86  puppet agent -t
+   87  puppet config print |grep confdir
+   88  vim autosign.conf
+   89  hostname
+   90  cd /etc/puppetlabs/code/environments/production/manifests/
+   91  vim site.pp
+   92  cd ..
+   93  ls
+   94  cd modules
+   95  pdk new modules base
+   96  pdk new module base
+   97  ls
+   98  cd manifest
+   99  cd manifests
+  100  vim init.pp
+  101  puppet agent -t
+  102  cd ..
+  103  ls
+  104  history >log1.txt
